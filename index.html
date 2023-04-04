@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-DO App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="tdhed">
+        <h1><span>To-Do</span> WebApp</h1>
+    </div>
+
+    <div class="player">
+        <div class="relaxsound">
+            <p>Relaxing Sound</p>
+        </div>
+
+        <audio id="music-player"></audio>
+        
+        <div class="controls">
+          <button id="prev-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4caf50" width="24px" height="24px"><path d="M15.5 3l-8.5 8.5 8.5 8.5v-17z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+          </button>
+          
+          <button id="play-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4caf50" width="24px" height="24px"><path d="M8 5v14l11-7z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+          </button>
+          
+          <button id="next-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4caf50" width="24px" height="24px"><path d="M8.5 3v17l8.5-8.5-8.5-8.5z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+          </button>
+        </div>
+        
+        <ul class="playlist">
+          <li data-src="good-morning-life-142546.mp3">SoundHelix Song 1</li>
+          <li data-src="beautiful-trip-142481.mp3">SoundHelix Song 2</li>
+          <li data-src="acoustic-folk-music-guitar-141345.mp3">SoundHelix Song 3</li>
+          <li data-src="calm-chill-beautiful-141317.mp3">SoundHelix Song 4</li>
+          <li data-src="lofi-chill-140858.mp3">SoundHelix Song 5</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container py-5 mx-auto">
+        <!-- Task input section began -->
+        <div class="taskDiv">
+            <h5 class="card-title">Add TASK</h5>
+            <div>
+                <div class="card-pd d-flex">
+                    <input class="addTask" id="addTask" placeholder="Write Your Notes Here..."></input>
+                    <button class="btn btn-danger" id="inputTask">Add</button>
+                </div>
+                <div>
+                    <p class="completed btn" id="allCompletedTask">Completed <span id="completedNumber">0</span></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="task-list">
+            <h3 id="insertName">Task List</h3>
+            <div class="row py-5 mx-auto d-flex" id="pushNote">
+
+            </div>
+        </div>
+    </div>
+
+    <section class="taskT hide">
+        <img class="playsound close" src="./xmark-solid.svg" alt="">
+        <h3 class="title">Completed Task</h3>
+        <div class="taskComplete">
+            <div class="row mx-2 py-5" id="pushComplete">
+            </div>
+        </div>
+    </section>
+    <audio id="sound"></audio>
+    <script src="index.js"></script>
+    
+</body>
+</html>
